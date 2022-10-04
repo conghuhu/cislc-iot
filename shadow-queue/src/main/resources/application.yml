@@ -1,0 +1,37 @@
+server:
+  port: 8090
+
+spring:
+# MySQL
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+thread-pool:
+  core-pool-size: 5
+  max-pool-size: 10
+  queue-capacity: 5
+
+shadow:
+  mqtt:
+    host: 120.78.133.4
+    port: 1883
+    username: guest
+    password: guest
+    timeout: 60
+    keepAlive: 180
+    preFix: 'tcp://'
+    clientId: shadowTest

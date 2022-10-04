@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classes>
+
+    <class name="Icebox" device="true" table="icebox">
+        <field type="String" table="icebox" column="name">name</field>
+        <field type="Double" table="icebox" column="temperature">temperature</field>
+		<list type="Light" table="light">lightList</list>
+		<list type="Door" table="door">doorList</list>
+        <video>camera</video>
+    </class>
+
+    <class name="Light" table="light">
+        <field type="int" table="light" column="serial">serial</field>
+        <field type="String" table="light" column="position">position</field>
+        <field type="String" table="light" column="state">state</field>
+    </class>
+
+    <class name="Door" table="door">
+        <field type="String" table="door" column="name">serial</field>
+        <field type="String" table="door" column="position">position</field>
+        <field type="String" table="door" column="state">state</field>
+    </class>
+
+</classes>
